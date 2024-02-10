@@ -84,7 +84,7 @@ const NoteState = (props) => {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    const data = await response.json();
+    await response.json();
 
     showAlert( "Updated Note Successfully", "success")
     await fetchNotes()

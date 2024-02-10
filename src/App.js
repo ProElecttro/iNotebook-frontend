@@ -10,7 +10,6 @@ import Login from './components/login';
 import SignUp from './components/signup';
 import Alert from './components/alert';
 import AlertState from './contexts/alert/alertState';
-import Test from './reduxtest';
 
 const App = () => {
   return (
@@ -23,7 +22,6 @@ const App = () => {
           </div>
           <div className="container">
             <Routes>
-              <Route path="/test" element={<Test />} />
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/login" element={<Login />} />

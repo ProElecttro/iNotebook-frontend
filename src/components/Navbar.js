@@ -1,17 +1,7 @@
 import React from 'react'
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = (props) => {
-    const amount = useSelector(state => state.amount);
-
-    if(amount){
-        alert(amount)
-    }
-
-    const location = useLocation()
-    
-    // console.log(amount)
     const navigate = useNavigate()
 
     const handleLogout = () => {
@@ -37,7 +27,6 @@ const Navbar = (props) => {
                             <NavLink className="nav-link" to="/about">About</NavLink>
                         </li>
                     </ul>
-                    {location.pathname === "/test" && <div className='btn btn-primary'>Your balance: {amount}</div>}
                     {!localStorage.getItem('auth-token') ? <form className="d-flex" role="search">
                         <NavLink to={"/login"} className="btn btn-outline-primary mx-1">Login</NavLink>
                         <NavLink to={"/signup"} className="btn btn-primary mx-1">SignUp</NavLink>
