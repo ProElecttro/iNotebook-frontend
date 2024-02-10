@@ -17,7 +17,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            let url = "http://localhost:4000/api/v1/auth/login"
+            let url = "https://i-notebook-backend-sandy.vercel.app:4000/api/v1/auth/login"
 
             const method = "POST"
 

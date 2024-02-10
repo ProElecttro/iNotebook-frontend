@@ -13,7 +13,7 @@ const NoteState = (props) => {
   const fetchNotes = async () => {
     try {
       setLoading(true)
-      const url = "http://localhost:4000/api/v1/notes/getNotes";
+      const url = "https://i-notebook-backend-sandy.vercel.app:4000/api/v1/notes/getNotes";
 
       const headers = {
         'Accept': '*/*',
@@ -38,7 +38,7 @@ const NoteState = (props) => {
   };
 
   const addNote = async (title, description, tags) => {
-    let url = "http://localhost:4000/api/v1/notes/addNotes"
+    let url = "https://i-notebook-backend-sandy.vercel.app:4000/api/v1/notes/addNotes"
 
     const method = "POST"
 
@@ -64,7 +64,7 @@ const NoteState = (props) => {
   }
 
   const updateNote = async (editNote) => {
-    const url = `http://localhost:4000/api/v1/notes/updateNotes/${editNote.notes_id}`
+    const url = `https://i-notebook-backend-sandy.vercel.app:4000/api/v1/notes/updateNotes/${editNote.notes_id}`
 
     const method = 'PUT'
     const headers = {
@@ -91,7 +91,7 @@ const NoteState = (props) => {
   }
 
   const deleteNote = async (notes_id) => {
-    const url = `http://localhost:4000/api/v1/notes/deleteNotes/${notes_id}`
+    const url = `https://i-notebook-backend-sandy.vercel.app:4000/api/v1/notes/deleteNotes/${notes_id}`
 
     const method = 'DELETE'
     const headers = {

@@ -16,7 +16,7 @@ const SignUp = () => {
         e.preventDefault();
 
         try {
-            const url = "http://localhost:4000/api/v1/auth/signup";
+            const url = "https://i-notebook-backend-sandy.vercel.app:4000/api/v1/auth/signup";
             const method = "POST";
 
             const headers = {
